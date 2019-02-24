@@ -34,6 +34,7 @@
     var elem_tbody = elem_itemlist.getElementsByTagName('tbody')[0];
     var elem_spacers = document.querySelectorAll('.spacer');
     var elem_articles = document.querySelectorAll('.athing');
+	var elem_more = document.querySelector('.morelink');
     var articles = new Array();
 
     elem_articles.forEach(parseArticle);
@@ -48,6 +49,7 @@
         new_tbody.append(elem_spacers[i]);
         i++;
     });
+	new_tbody.append(elem_more);
 
     elem_tbody.parentNode.replaceChild(new_tbody, elem_tbody);
 })();
